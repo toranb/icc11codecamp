@@ -1,0 +1,18 @@
+hello world <br />
+
+{% for session in object_list %}
+  {{session.title}}<br />
+  {% for speaker in session.speakers.all %}
+    {{speaker.name}}
+  {% endfor %}
+{% endfor %}
+
+{% load staticfiles %}
+{% load compress %}
+
+{% compress js %}
+<script type="text/javascript" src="{% static 'app.js' %}"></script>
+<script type="text/javascript" src="{% static 'more.js' %}"></script>
+<script type="text/javascript" src="{% static 'less.js' %}"></script>
+<script type="text/coffeescript" src="{% static 'example.coffee' %}"></script>
+{% endcompress %}

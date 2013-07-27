@@ -1,0 +1,1 @@
+coffeeScriptIsFun = "123"
